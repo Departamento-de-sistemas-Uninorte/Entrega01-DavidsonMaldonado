@@ -1,0 +1,8 @@
+<h2>New tweet</h2>
+
+<%= form_with(model: Tweet, local: true) do |form| %>
+  <%= form.label :text %>
+  <%= form.text_area :text %>
+  <%= form.submit "Crear tweet" %>
+  <% end %>
+<%= link_to('View all tweets', tweets_path) %>
