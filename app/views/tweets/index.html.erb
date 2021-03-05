@@ -1,1 +1,7 @@
-<h1>Main page</h1>
+<h3>Main page</h3>
+
+  <% @tweet.each do |tweet| %>
+    <p><%= tweet.user_name%> - <%= tweet.text %> <%= link_to('View tweet details',tweet_path(tweet)) %> - <%=link_to('Delete', tweet_path(tweet.id), method: :delete)%></p>
+  <% end %>
+
+  <%= link_to('New Tweet', new_tweet_path)%>
