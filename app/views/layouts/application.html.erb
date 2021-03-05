@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Entrega01</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div style="position: absolute; right:10px;">
+      <%= link_to('Logout', destroy_user_session_path, method: :delete) if user_signed_in?%>
+      <%= link_to('Sign in', new_user_session_path, method: :get) unless user_signed_in?%>
+    </div>
+    <div class="">
+      <p> <%= notice %></p>
+      <p> <%= flash.alert%> </p>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>
