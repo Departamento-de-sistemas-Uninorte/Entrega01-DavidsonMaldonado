@@ -23,4 +23,4 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: db/production.sqlite3
+  database: sabana_tweet_production

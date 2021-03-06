@@ -118,14 +118,15 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   #Email setup smtp protocol
-  config.action_mailer.default_url_options = {host: 'https://sabanatweet.herokuapp.com'}
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'backendtest0127@gmail.com',
+    user_name:            'tempbackend01@gmail.com',
     password:             ENV['GMAIL_PASS'],
     authentication:       'plain',
     enable_starttls_auto: true }
+  config.action_mailer.default_url_options = {host: 'https://sabanatweet.herokuapp.com/'}
 end
