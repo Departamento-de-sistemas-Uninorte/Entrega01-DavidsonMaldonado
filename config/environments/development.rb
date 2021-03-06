@@ -13,7 +13,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }#Lineas añadidas para intentar enviar correos
+#config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }#Lineas añadidas para intentar enviar correos
 #config.action_mailer.delivery_method = :smtp
 #config.action_mailer.smtp_settings = {
 #  user_name:      'backendtest0127@gmail.com',

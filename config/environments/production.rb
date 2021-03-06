@@ -118,7 +118,7 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   #Email setup smtp protocol
-  config.action_mailer.default_url_options = {host: 'sabanatweet.herokuapp.com',protocol: 'https'}
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
@@ -128,4 +128,5 @@ Rails.application.configure do
     password:             ENV['GMAIL_PASS'],
     authentication:       'plain',
     enable_starttls_auto: true }
+  config.action_mailer.default_url_options = {host: 'https://sabanatweet.herokuapp.com/'}
 end
